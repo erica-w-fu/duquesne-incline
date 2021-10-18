@@ -1,0 +1,499 @@
+/* styling for colors and fonts */
+:root {
+    --blue: #6CA6C1;
+    --yellow: #FBC42B; 
+    --green: #79B473;
+    --black: #2C2926;
+    --red: #DC5126;
+    --white: #f0f0f0;
+    --fontsans: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+    --fontserif: Palatino, serif;
+}
+
+/* font types */
+h1 {
+    font-family: var(--fontserif);
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+sub {
+    font-family: var(--fontserif);
+    font-size: 2.5em;
+    font-weight: normal;
+}
+h2 {
+    font-family: var(--fontserif);
+    font-size: 2.5em;
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+#green {
+    color:#79B473;
+    text-align:center
+}
+h3 {
+    font-family: var(--fontsans);
+    font-size: 2.0em;
+    font-weight: normal;
+    color: var(--black);
+}
+h4 {
+    font-family: var(--fontsans);
+    font-size: 1.15em;
+    font-weight: normal;
+    color: var;
+    margin: 0px;
+}
+text {
+    font-family: var(--fontsans);
+    font-size: 1.15em;
+    color: var(--black);
+}
+p {
+    font-family: var(--fontsans);
+    font-size: 1.15em;
+    color: var(--black);
+}
+ul {
+    font-family: var(--fontsans);
+    font-size: 1.15em;
+    color: var(--black);
+}
+a {
+    font-family: var(--fontsans);
+    font-size: 1em;
+    font-weight: normal;
+    padding: 0px;
+}
+a:link {
+  color: var(--black);
+}
+a:hover {
+  color: #508198;
+}
+a:visited {
+  color: #4e7749;
+}
+.footer-section i {
+    padding-top: 15px;
+    font-size:4em;
+    color: var(--black);
+}
+header {
+    position: fixed;
+    background-color: var(--blue);
+    left: 100px;
+    right: 0px;
+    top: 0px;
+    padding-top: 5px;
+    z-index: 1;
+    height: 108px;
+}
+header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--yellow);
+    margin-left:50px;
+    /* float: left; */
+}
+header img {
+    width: 150px;
+    vertical-align: middle;
+    float: right;
+}
+/* hide logo, make header text smaller when too small */
+@media only screen and (max-width: 720px) {
+  header {
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2em;
+    padding-top: 20px;
+    margin-right: 50px;
+  }
+  header img {
+    display: none;
+  }
+}
+
+
+/* major sections */
+#component {
+    top: 108px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background-color: var(--white);
+    /* padding: 50px; */
+}
+#content {
+  display: block;
+  float: center;
+  margin-left: 100px;
+  margin-right: 0px;
+}
+/* navigation */
+#nav {
+    width: 100px;
+    bottom: 0px;
+    left: 0px;
+    /* top: 118px; */
+    top: 0px;
+    position: fixed; 
+    /* background-color: var(--red); */
+    background-image: url('../images/railbgFinal.png'); 
+    overflow: none; 
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#pages {
+    padding: 40px 0px 40px 0px; 
+    height: calc(100% - 116px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+#nav #corner {
+    background-color: var(--blue);
+    top: 0;
+    height: 112px;
+    background-image: url('../images/duquesneTop.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#nav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--yellow);
+    display: block;
+    font-family: var(--fontserif);
+    z-index: 3;
+    background-color: var(--black);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+#nav img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+}
+/* footer styling */
+.footer {
+    width: fill;
+    justify-content: space-around;
+    display: flex; 
+    flex-wrap: wrap;
+    background-color: var(--green);
+    margin-top: -9px;
+    padding: 50px 25px;
+}
+.footer-section-big {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 1;
+    background-color: var(--green);
+}
+.footer-section {
+    padding: 15px;
+    background-color: var(--green);
+}
+
+/* table styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: var(--fontsans);
+}
+input, textarea {
+    font-family: var(--fontsans);
+    font-size: 1.15em;
+    border: none;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.159);
+    border-bottom: 1px solid var(--yellow);
+    color: var(--black);
+}
+table td, th{
+  border-bottom: 1px solid var(--yellow);
+  padding: 2px;
+  text-align: right;
+  font-size: 1.25em;
+  font-family: var(--fontsans);
+  color: var(--black);
+}
+table th, h4 {
+  text-align: center;
+  padding: 10px;
+  border: none;
+  font-family: var(--fontserif);
+  font-weight: bold;
+}
+.container-table td, th{
+  border: none;
+  padding: 2px;
+  text-align: left;
+  vertical-align:top;
+  font-size: 1.25em;
+  font-family: var(--fontsans);
+  font-weight: normal;
+}
+td:first-child {
+  text-align: left;
+}
+
+/* form styling */
+form {
+  margin: auto; 
+  padding: 50px;
+  background-color: var(--green);
+  max-width: 650px;
+}
+#submit-button {
+    background-color: rgba(0, 0, 0, 0.159);
+    padding: 10px;
+    border: 1px solid var(--yellow);
+    width: 100%;
+    margin: auto;
+    color: var(--black);
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+    clear: both;
+}
+#button-container{
+  padding:20px 20px 0px 20px
+}
+#submit-button:hover {
+    background-color: var(--yellow);
+}
+::placeholder{
+    color: var(--yellow);
+    font-family: var(--fontsans)
+}
+label {
+    font-family: var(--fontsans);
+    font-size: 1.15em;
+    color: var(--black);
+    font-weight:bold;
+    /* width: 100%; */
+}
+.form-section {
+  padding: 20px;
+}
+/* custom checkbox */
+/* source: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: var(--black);
+    font-family: var(--fontsans);
+    font-size: 1.2em;
+    font-weight: normal;
+    float:left;
+    padding-top:15px
+}
+.checkbox {
+    -webkit-appearance: none;
+    background-color: rgba(0, 0, 0, 0.159);
+    border: 1px solid var(--yellow);
+    width: 13px;
+    padding: 13px;
+    border-radius: 3px;
+    position: relative;
+    float: left;
+}
+.checkbox:active, .checkbox:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.checkbox:checked {
+    background-color: var(--yellow);
+}
+.checkbox:checked:after {
+	content: '\263B';
+	font-size: 25px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+  color: var(--white);
+  z-index: 1;
+}
+
+/* big container styling (full width) */
+.container {
+    left: 0px;
+    right: 0px;
+    justify-content: space-between;
+    display: flex; 
+    padding: 25px 50px 25px 50px;
+    flex-wrap: wrap;
+    grid-column-gap: 10px;
+    align-items: flex-end;
+}
+.container-iframe{
+    margin: 25px 50px 50px 50px;
+    overflow: hidden;
+    padding-top: 45%; 
+    position: relative;
+    /* height: 95%; */
+    background-color:black;
+}
+.container-iframe iframe, 
+.container-iframe img {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.container-paragraph {
+    left: 0px;
+    right: 0px;
+    display: block; 
+    padding: 25px 75px 25px 75px;
+}
+.container-green {
+    left: 0px;
+    right: 0px;
+    justify-content: space-between;
+    display: flex; 
+    padding: 25px 50px 25px 50px;
+    flex-wrap: wrap;
+    grid-column-gap: 10px;
+    background-color: var(--green);
+    align-items: center;
+}
+/* .container-gallery {
+    left: 0px;
+    right: 0px;
+    justify-content: space-between;
+    display: flex; 
+    flex-wrap: wrap;
+    background-color: black;
+} */
+.container-heading {
+    padding: 20px 25px 0px 25px;
+    flex-grow: 1;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.container-table-big {
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+    display: flex; 
+    padding: 20px 25px 50px 25px;
+    flex-wrap: wrap;
+}
+.container-center {
+  left: 0px;
+  right: 0px;
+  display: block; 
+  padding: 25px 75px 25px 75px;
+  margin:auto;
+  max-width:650px
+}
+
+/* sections within container (not full width) */
+.container-table{
+    /* padding: 10px 50px 20px 10px; */
+    flex:1;
+    flex-grow:1;
+}
+.photo-gallery{
+    flex-grow: 1;
+    max-width: 25%;
+    position: center;
+}
+.column-section {
+    padding: 20px 25px 50px 25px;
+    flex-grow: 1;
+    flex: 1;
+}
+.column-section-green{
+    padding: 20px 50px 25px 50px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+  
+/* lightbox styling */ 
+/* source: https://www.w3schools.com/howto/howto_js_lightbox.asp */
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* styling photo captions credits */
+.photo-caption {
+  float:right;
+  padding-right:25px;
+  /* margin-top:-40px; */
+}
+
+/* specific width styling */
+.width-small {
+  min-width:300px;
+}
+.width-smallish {
+  min-width: 350px;
+}
+.width-large {
+  min-width: 500px;
+}
+.width-larger {
+  min-width: 700px;
+}
+/* specific color styling */
+.green {
+  color:#79B473;
+}
+.width-medium {
+  max-width:900px;
+}
+.photo-medium {
+  width:100%;
+  min-width:450px
+}
+.photo-small {
+  width:100%;
+  min-width:300px
+}

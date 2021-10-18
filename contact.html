@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Erica"/>
+        <meta name="keywords" content="Carnegie Mellon University, Information Systems, Duquesne Incline, Pittsburgh, Web Development"/>
+        <meta name="description" content="Erica Fu Web Development Project"/>
+
+        <title>Duquesne Incline</title>
+
+        <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css" />
+        <link rel="stylesheet" media="all" type="text/css" href="css/jquery.lightbox.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/jquery.lightbox.min.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <h1>Duquesne Incline</h1>
+            <a href="index.html">
+                <img src="images/duquesne_incline_logo.png" alt="Logo"/>
+            </a>
+            <hr/>
+        </header>
+        <div id="component">
+            <div id="nav">
+                <div id="corner"></div>
+                <div id="pages">
+                    <a href="contact.html">Contact</a>
+                    <a href="visit.html">Visit</a>
+                    <a href="about.html">About</a>
+                    <a href="index.html">Home</a>
+                </div>
+                <img src="images/duquesneCar.png" alt="Duquesne Car" style="bottom:71%">
+            </div>
+            <div id="content">
+                <div class="container-center">
+                    <h2 id="green">Contact Form</h2>
+                    <form onsubmit="return validate()">
+                        <p><strong>Please fill out some personal information.</strong></p>
+                        <div class="form-section">
+                            <input type="text" id="cName" name="cName" placeholder="Your Name *" size="20" minlength="1" maxlength="250" required>
+                            <br/>
+                            <br/>
+                            <input type="text" id="zip" name="zip" placeholder="Your Zip Code" size="20" minlength="5" maxlength="5">
+                            <br/>
+                            <br/>
+                            <input type="email" id="cEmail" name="cEmail" placeholder="Your Email Address *" minlength="11" maxlength="64" required><br/>
+                            <br/>
+                        </div>
+
+                        <label for="receiveUpdate">Please indicate if you want to subscribe to our newsletter.</label><br/>
+                        <div class="form-section">
+                            <input type="checkbox" id="receiveUpdate" class="checkbox">
+                            <label for="receiveUpdate" class="checkbox-container">Yes, please update me!</label>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <label for="message">Send us a message.</label>
+                        <div class="form-section">
+                            <textarea name="message" id="message" cols="50" rows="10" maxlength="1000" placeholder="Your Message"></textarea>
+                        </div>
+                        <div id="button-container">
+                            <input type="submit" value="SUBMIT" id="submit-button">
+                        </div>
+                    </form>
+                </div>
+
+                <hr>
+                <div class="footer">
+                    <hr/>
+                    <div class="footer-section-big">
+                        <div class="footer-section">
+                            <p>
+                                <strong>Parking</strong><br>
+                                1197 West Carson St.<br> 
+                                Pittsburgh, PA 15211<br>
+                            </p> 
+                        </div>
+                        <div class="footer-section">
+                            <p>
+                                <strong>Mailing</strong><br>
+                                1220 Grandview Ave.<br> 
+                                Pittsburgh, PA 15211<br>
+                            </p> 
+                        </div>
+                    </div>
+                    <div class="footer-section-big">
+                        <div class="footer-section">
+                            <p>412.381.1665<br>
+                                <a href="http://www.duquesneincline.org/" target=_http://www.duquesneincline.org/>duq.incline@duquesneincline.org</a>
+                                <br>
+                                <a href="contact.html">Subscribe to our newsletter</a>
+                            </p>
+                        </div>
+                        <div class="footer-section" >
+                            <a href="mailto:duq.incline@duquesneincline.org" target=_mailto:duq.incline@duquesneincline.org><i class="fa fa-envelope"></i></a>
+                            <a href="https://www.youtube.com/watch?v=bSLvrz5GraI" target=_https://www.youtube.com/watch?v=bSLvrz5GraI><i class="fa fa-youtube-square"></i></a>
+                            <a href="https://www.facebook.com/TheDuquesneIncline/" target=_https://www.facebook.com/TheDuquesneIncline/><i class="fa fa-facebook-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-green">
+                    &copy; 2021 Erica Fu <br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
